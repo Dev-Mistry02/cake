@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ground text-body;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-btn text-ground font-sans font-semibold text-sm tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95;
+  }
+
+  .section-pad {
+    @apply px-6 md:px-12 pt-20 pb-24;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-6xl font-serif font-bold text-ink tracking-tight leading-tight mb-6 italic;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+:root {
+  --color-ground: #17100e;
+  --color-secondary: #211713;
+  --color-card: #291b17;
+  --color-border: #493329;
+  --color-accent: #b88a5a;
+  --color-heading: #f5e6d3;
+  --color-body: #c5b4a3;
+}
+
+.bg-ground { background-color: var(--color-ground); }
+.bg-ground\/30 { background-color: rgb(23 16 14 / 30%); }
+.bg-ground\/40 { background-color: rgb(23 16 14 / 40%); }
+.bg-ground\/50 { background-color: rgb(23 16 14 / 50%); }
+.bg-ground\/70 { background-color: rgb(23 16 14 / 70%); }
+.bg-accent\/10 { background-color: rgb(184 138 90 / 10%); }
+.bg-accent\/20 { background-color: rgb(184 138 90 / 20%); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-secondary\/90 { background-color: rgb(33 23 19 / 90%); }
+.bg-secondary\/95 { background-color: rgb(33 23 19 / 95%); }
+.bg-card { background-color: var(--color-card); }
+.bg-btn { background-color: var(--color-accent); }
+.bg-accent { background-color: var(--color-accent); }
+.text-ground { color: var(--color-ground); }
+.text-ink { color: var(--color-heading); }
+.text-body { color: var(--color-body); }
+.text-accent { color: var(--color-accent); }
+.text-body\/60 { color: rgb(197 180 163 / 60%); }
+.text-body\/70 { color: rgb(197 180 163 / 70%); }
+.text-body\/80 { color: rgb(197 180 163 / 80%); }
+.text-body\/90 { color: rgb(197 180 163 / 90%); }
+.text-ink\/60 { color: rgb(245 230 211 / 60%); }
+.text-ink\/70 { color: rgb(245 230 211 / 70%); }
+.text-ink\/90 { color: rgb(245 230 211 / 90%); }
+.border-border { border-color: var(--color-border); }
+.border-body { border-color: var(--color-border); }
+.border-body\/20 { border-color: rgb(73 51 41 / 20%); }
+.border-body\/30 { border-color: rgb(73 51 41 / 30%); }
+.border-body\/40 { border-color: rgb(73 51 41 / 40%); }
+.border-btn { border-color: var(--color-accent); }
+.border-accent\/60 { border-color: rgb(184 138 90 / 60%); }
+.border-ink\/60 { border-color: rgb(245 230 211 / 60%); }
